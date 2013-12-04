@@ -1,26 +1,73 @@
 <%= form_for(@event) do |f| %>
-  <% if @event.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h2>
+<% if @event.errors.any? %>
+<div id="error_explanation">
+<h2><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h2>
 
-      <ul>
-      <% @event.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+<ul>
+<% @event.errors.full_messages.each do |msg| %>
+<li><%= msg %></li>
+<% end %>
+</ul>
+</div>
+<% end %>
+
+<div class="field">
+<p>Create New Event</p>
+<p>Step 1 Add Event Details</p>
+
+<form>
+Event Title * : <input type="text" name="firstname"><br>
+Venue Name * : <input type="text" name="lastname"><br>
+Street Address: <input type="text" name="lastname"><br>
+Date *: <input type="text" name="lastname"><br>
+Time *: <input type="text" name="lastname"><br>
+Category: <input type="text" name="lastname"><br>
+</form>
+<%= f.label :description %><br />
+<%= f.text_area :description %>
+
+<form>
+Organiser Details: <br>
+<input type="text" name="lastname"><br>
+</form>
+
+<p>Step 2 Create Tickets</p>
+<table>
+<tr>
+<th>Ticket Name *</th>
+<th>Quantity Available *</th>
+<th>Price *</th>
+</tr>
+<tr>
+<td><INPUT TYPE="TEXT" NAME="ticket_name" SIZE="25"></td>
+<td><INPUT TYPE="TEXT" NAME="quantity_available" SIZE="25"></td>
+<td><INPUT TYPE="TEXT" NAME="ticket_price" SIZE="25"></td>
+</tr>
+<tr>
+<td><INPUT TYPE="TEXT" NAME="ticket_name" SIZE="25"></td>
+<td><INPUT TYPE="TEXT" NAME="quantity_available" SIZE="25"></td>
+<td><INPUT TYPE="TEXT" NAME="ticket_price" SIZE="25"></td>
+</tr>
+</table>
+
+<p>Step 3 Create Tickets</p>
+<p>Privacy </p>
+<form>
+<input type="radio" name="privacy" value="public">Public<br>
+<input type="radio" name="privacy" value="invited">Invited-only<br>
+<input type="checkbox" name="invited" value="invite_friend">Guest can invite friends<br>
+<input type="checkbox" name="invited" value="show_guest">Show guest<br>
+</form>
 
 
+</div>
+<div class="actions">
+<%= f.submit %>
 
-  <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
-  </div>
-
-
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<form name="input" action="#html_form_action.asp" method="get">
+<input type="save" value="Save">
+<input type="preview" value="Preview">
+<input type="publish" value="Publish">
+</form>
+</div>
 <% end %>

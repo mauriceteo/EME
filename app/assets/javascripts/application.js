@@ -15,14 +15,9 @@
 //= require_tree .
 
 
- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-<script type="text/javascript" src="http://cloud.github.com/downloads/malsup/cycle/jquery.cycle.all.2.72.js"></script>
-<script type="text/javascript">
-     $(document).ready(function() {
-        $('#shuffle').cycle({ 
-    fx:     'shuffle', 
-    easing: 'easeOutBack', 
-    delay:  -4000 
-});
-});
-});
+!function ($) {
+        $(function(){
+          // carousel demo
+          $('#myCarousel').carousel()
+        })
+      }(window.jQuery)
