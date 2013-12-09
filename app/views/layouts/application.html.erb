@@ -7,10 +7,10 @@
   <%= csrf_meta_tags %>
   <style type="text/css" media="screen">
   #header {
-        background-image: url("assets/logo4.png");
+        background-image: url("assets/sexylogo2.png");
         background-repeat: no-repeat;
         background-position: top left;
-        height: 64px;
+        height: 49px;
       }
 </style>
   
@@ -20,25 +20,25 @@
 		<div class="navbar-inner">
 			<div class = "container">
 
-        <div id="header" style="margin-top: 10px">
-            <ul class="nav" style="margin: 5px 0px 0px 105px" >
+        <div id="header">
+          <ul class="nav" style="margin: 5px 0px 0px 105px" >
               <li><%= link_to "All Event", events_path %></li>
-              <li><%= link_to "Create Event", new_event_path %></li>
               <% if user_signed_in? %>
+              <li><%= link_to "Create Event", new_event_path %></li>
               <li><a href="#myEvent">My Event</a></li>
               <li><a href="#ticket">My Ticket</a></li>
               <% end %>
-            </ul>
-            <ul class=" nav pull-right">
+          </ul>
+          <ul class=" nav pull-right">
               <% if user_signed_in? %>
-            <li><%= link_to "Welcome, " + current_user.full_name, edit_user_registration_path %></li>
-            <button type="Logout" class="teaserSmallButton" style="margin-top: 10px"><%= link_to "Log Out", destroy_user_session_path, method: :delete %></button>
-          <% else %>
-            <button type="Register" class="teaserSmallButton" style="margin-top: 10px"><%= link_to "Register", new_user_registration_path %></button>
-             <button type="Login" class="teaserSmallButton" style="margin-top: 10px"><%= link_to "Log in", user_session_path %></button>
-          <% end %>
-        </ul>
-		     </div>
+                <li><%= link_to "Welcome, " + current_user.full_name, edit_user_registration_path %></li>
+                  <button type="Logout" class="teaserSmallButton" style="margin-top: 10px"><%= link_to "Log Out", destroy_user_session_path, method: :delete %></button>
+              <% else %>
+                <button type="Register" class="teaserSmallButton" style="margin-top: 10px"><%= link_to "Register", new_user_registration_path %></button>
+               <button type="Login" class="teaserSmallButton" style="margin-top: 10px"><%= link_to "Log in", user_session_path %></button>
+            <% end %>
+          </ul>
+		    </div>
 	   </div>
    </div>
 </div>
@@ -50,10 +50,11 @@
         <%= message %>
       </div>
     <% end %>
-
 <%= yield %>
 </div>
 </div>
+
+
 <div class="footer-wrap">
  <div class="clearfix footer">
   <div class = "menu-wrap" id="footer-menu-1-wrap">
