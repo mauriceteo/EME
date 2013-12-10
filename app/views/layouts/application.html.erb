@@ -5,14 +5,6 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-  <style type="text/css" media="screen">
-  #header {
-        background-image: url("assets/sexylogo2.png");
-        background-repeat: no-repeat;
-        background-position: top left;
-        height: 49px;
-      }
-</style>
   
 </head>
 <body style="background-color:orange;">
@@ -21,10 +13,11 @@
 			<div class = "container">
 
         <div id="header">
-          <ul class="nav" style="margin: 5px 0px 0px 105px" >
+          <ul class="nav" style="margin: 5px 0px 5px 105px" >
+            <li><%= image_tag "sexylogo2.png"%></li>
               <li><%= link_to "All Event", events_path %></li>
               <li><%= link_to "About Us", page_about_us_path %></li>
-              <li><%= link_to "Contact Us", page_contact_us_path %></li>
+              <li><%= link_to "Contact Us", contact_path %></li>
               <li><%= link_to "My Event", page_my_event_path %></li>
 
               <li><%= link_to "My Ticket", page_my_ticket_path %></li>
@@ -46,7 +39,7 @@
 		    </div>
 	   </div>
    </div>
-</div>
+ </div>
 
   <div class="container">
     <% flash.each do |type, message| %>
