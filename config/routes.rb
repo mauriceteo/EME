@@ -1,4 +1,22 @@
 EME::Application.routes.draw do
+  get "page/home"
+
+  get "page/about_us"
+
+  get "page/all_event"
+
+  get "page/event_details"
+
+  get "page/event_preview"
+
+  get "page/event_publish"
+
+  get "page/my_ticket"
+
+  get "page/my_event"
+
+  get "page/contact_us"
+
   devise_for :users
 
   resources :events
