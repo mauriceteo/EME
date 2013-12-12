@@ -7,41 +7,37 @@
   <%= csrf_meta_tags %>
   
 </head>
-<body style="background-color:orange;">
-   <div class="navbar navbar-inverse navbar-fixed-top">
-		<div class="navbar-inner">
-			<div class = "container">
-
-        <div id="header">
-          <ul class="nav" style="margin: 5px 0px 5px 105px" >
-            <li><%= image_tag "sexylogo2.png"%></li>
+<body>
+  <!--Start wrapper -->
+<div class="containerWrap">
+ <!--start header -->
+  <div class="header">
+      <!--start logo -->
+      <div class="logo">
+        <%= image_tag "sexylogo2.png", :size => "110x110" %>
+    </div><!--end logo -->
+    <!--start navigation -->
+    <div id="nav">  <li class="current"><a href="#">Home</a></li>
               <li><%= link_to "All Event", events_path %></li>
-              <li><%= link_to "About Us", page_about_us_path %></li>
-              <li><%= link_to "Contact Us", contact_path %></li>
+
               <li><%= link_to "My Event", page_my_event_path %></li>
 
               <li><%= link_to "My Ticket", page_my_ticket_path %></li>
+
               <% if user_signed_in? %>
               <li><%= link_to "Create Event", new_event_path %></li>
-              <li><a href="#myEvent">My Event</a></li>
-              <li><a href="#ticket">My Ticket</a></li>
-              <% end %>
-          </ul>
-          <ul class=" nav pull-right">
-              <% if user_signed_in? %>
-                <li><%= link_to "Welcome, " + current_user.full_name, edit_user_registration_path %></li>
-                  <button type="Logout" class="teaserSmallButton" style="margin-top: 10px"><%= link_to "Log Out", destroy_user_session_path, method: :delete %></button>
+              <li><%= link_to "Welcome, " + current_user.full_name, edit_user_registration_path %></li>
+              <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
               <% else %>
-                <button type="Register" class="teaserSmallButton" style="margin-top: 10px"><%= link_to "Register", new_user_registration_path %></button>
-               <button type="Login" class="teaserSmallButton" style="margin-top: 10px"><%= link_to "Log in", user_session_path %></button>
+                <li><%= link_to "Register", new_user_registration_path %></li>
+                <li><%= link_to "Log in", user_session_path %></li>
             <% end %>
           </ul>
-		    </div>
-	   </div>
-   </div>
- </div>
+  </div> 
+    <!--end navigation -->
+</div>
 
-  <div class="container">
+  <div class="container" style="padding-top: 10px;">
     <% flash.each do |type, message| %>
       <div class="alert <%= flash_class type %>">
         <button class="close" data-dismiss="alert">×</button>
@@ -50,15 +46,16 @@
     <% end %>
 <%= yield %>
 </div>
-</div>
+
 
 
 <div class="footer-wrap">
  <div class="clearfix footer">
   <div class = "menu-wrap" id="footer-menu-1-wrap">
-    <span class="menu-title">Contact Us</span>
+    <span class="menu-title"><%= link_to "About Us", page_about_us_path %>
+              </span>
     <u1 id="footer-menu-1" class="menu">
-      <li><a href="#about">About Us</a></li>
+      <li><%= link_to "Contact Us", contact_path %></li>
     </div>
   </div>
 </div>
