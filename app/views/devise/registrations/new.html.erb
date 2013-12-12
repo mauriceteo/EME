@@ -1,3 +1,7 @@
+<% content_for :title do %>
+Register
+<% end %>
+
 <div class="row">
   <div class="span8">
 
@@ -12,7 +16,7 @@
     <%= f.input :email %>
     <%= f.input :password %>
     <%= f.input :password_confirmation %>
- <div class="pull-right"><%= f.button :submit, "Sign Out" %></div>
+ <div class="pull-right"><%= f.button :submit, "Sign Up" %></div>
 
     <% if devise_mapping.rememberable? -%>
       <div><%= f.input :remember_me, as: :boolean %></div>
