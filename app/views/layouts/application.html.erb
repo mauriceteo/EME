@@ -14,10 +14,10 @@
   <div class="header">
       <!--start logo -->
       <div class="logo">
-        <%= image_tag "sexylogo2.png", :size => "110x110" %>
+        <%=link_to(image_tag("Logo1.png",:size => "110x110"), page_home_path) %>
     </div><!--end logo -->
     <!--start navigation -->
-    <div id="nav">  <li class="current"><a href="#">Home</a></li>
+    <div id="nav">  <li class="current"><%= link_to "Home", page_home_path %></li>
               <li><%= link_to "All Event", events_path %></li>
 
               <li><%= link_to "My Event", page_my_event_path %></li>

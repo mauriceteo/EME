@@ -13,9 +13,7 @@
  */
 body{
   background-image:url('/assets/bg2.jpg');
-
 }
-
 
 .containerWrap {
   width: 100%;
@@ -33,6 +31,9 @@ body{
   text-align: right;
   padding-top: 1px;
   margin-bottom: 3px;
+}
+.well{
+  margin: 10px 0px 60px 0px;
 }
 
 #nav {
@@ -201,7 +202,6 @@ list-style: none;
 
  /* Carousel base class */
     .carousel {
-
       margin: 10px 0px 60px 0px;
     }
 
