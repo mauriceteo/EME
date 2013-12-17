@@ -649,6 +649,7 @@ a:focus {
 }
 
 p {
+  color :white;
   margin: 0 0 10px;
 }
 
@@ -738,11 +739,12 @@ h3,
 h4,
 h5,
 h6 {
+
   margin: 10px 0;
   font-family: inherit;
   font-weight: bold;
   line-height: 20px;
-  color: inherit;
+  color: white;
   text-rendering: optimizelegibility;
 }
 

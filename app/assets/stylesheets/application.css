@@ -15,6 +15,11 @@ body{
   background-image:url('/assets/bg2.jpg');
 }
 
+div .field{
+color:white;
+font-weight:bold;
+}
+
 .containerWrap {
   width: 100%;
   margin-top: 0px;
