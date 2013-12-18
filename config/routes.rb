@@ -1,4 +1,7 @@
 EME::Application.routes.draw do
+  resources :events
+
+
   get "page/home"
 
   get "page/about_us"
@@ -18,8 +21,6 @@ EME::Application.routes.draw do
   get "page/contact_us"
 
   devise_for :users
-
-  resources :events
 
 match 'contact' => 'contact#new', :as => 'contact', :via => :get
 match 'contact' => 'contact#create', :as => 'contact', :via => :post

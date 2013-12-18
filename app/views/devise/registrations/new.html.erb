@@ -19,7 +19,7 @@ Register
  <div class="pull-right"><%= f.button :submit, "Sign Up" %></div>
 
     <% if devise_mapping.rememberable? -%>
-      <div><%= f.input :remember_me, as: :boolean %></div>
+      <div><%= f.input :remember_me, as: :boolean, inline_label: 'Yes, remember me' %></div>
     <% end %>
 
    

@@ -1,9 +1,21 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  name: MyString
+  title: MyString
+  venue: MyString
+  address: MyString
+  date: 2013-12-18
+  time: 2013-12-18 00:15:24
+  category: MyString
   description: MyText
+  organiser_details: MyText
 
 two:
-  name: MyString
+  title: MyString
+  venue: MyString
+  address: MyString
+  date: 2013-12-18
+  time: 2013-12-18 00:15:24
+  category: MyString
   description: MyText
+  organiser_details: MyText

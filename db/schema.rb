@@ -11,13 +11,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131125131010) do
+ActiveRecord::Schema.define(:version => 20131218132641) do
 
   create_table "events", :force => true do |t|
+    t.string   "title"
+    t.string   "venue"
+    t.string   "address"
+    t.date     "date"
+    t.time     "time"
+    t.string   "category"
     t.text     "description"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.text     "organiser_details"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
     t.integer  "user_id"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   add_index "events", ["user_id"], :name => "index_events_on_user_id"

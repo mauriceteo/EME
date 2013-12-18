@@ -1,12 +1,51 @@
-<p id="notice"><%= notice %></p>
+<% content_for :title do %>
+Preview Event
+<% end %>
+p id="notice"><%= notice %></p>
 
 <p>
-  <b>Name:</b>
+  <b>Event Poster:</b>
+  <%= image_tag @event.avatar.url, :size=>"400x400" %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @event.title %>
+</p>
+
+<p>
+  <b>Venue:</b>
+  <%= @event.venue %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @event.address %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @event.date %>
+</p>
+
+<p>
+  <b>Time:</b>
+  <%= @event.time %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @event.category %>
 </p>
 
 <p>
   <b>Description:</b>
   <%= @event.description %>
+</p>
+
+<p>
+  <b>Organiser details:</b>
+  <%= @event.organiser_details %>
 </p>
 
 

@@ -1,12 +1,14 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
+gem 'rake', '~>10.0.4'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 gem 'devise'
 gem 'simple_form'
 gem 'linguistics'
+gem 'paperclip'
 
 group :development, :test do
 	gem 'sqlite3'
@@ -16,9 +18,7 @@ group :production do
 	gem "pg"
 end
 
-group :development, :test do
-    gem 'railroady'
-end
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

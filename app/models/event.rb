@@ -1,4 +1,4 @@
 class Event < ActiveRecord::Base
-  attr_accessible :description, :user_id
-  belongs_to :user
+  attr_accessible :address, :category, :date, :description, :organiser_details, :time, :title, :venue, :avatar
+  has_attached_file :avatar
 end
