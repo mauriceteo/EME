@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  ticket_name: MyString
+  ticket_price: 9.99
+  ticket_quantity: 1
+  due_date: 2013-12-22
+  ticket_validation: false
+  event: 
+
+two:
+  ticket_name: MyString
+  ticket_price: 9.99
+  ticket_quantity: 1
+  due_date: 2013-12-22
+  ticket_validation: false
+  event: 

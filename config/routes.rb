@@ -1,4 +1,7 @@
 EME::Application.routes.draw do
+  resources :tickets
+
+
   resources :events
 
 

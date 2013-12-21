@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Ticket name:</b>
+  <%= @ticket.ticket_name %>
+</p>
+
+<p>
+  <b>Ticket price:</b>
+  <%= @ticket.ticket_price %>
+</p>
+
+<p>
+  <b>Ticket quantity:</b>
+  <%= @ticket.ticket_quantity %>
+</p>
+
+<p>
+  <b>Due date:</b>
+  <%= @ticket.due_date %>
+</p>
+
+<p>
+  <b>Ticket validation:</b>
+  <%= @ticket.ticket_validation %>
+</p>
+
+<p>
+  <b>Event:</b>
+  <%= @ticket.event %>
+</p>
+
+
+<%= link_to 'Edit', edit_ticket_path(@ticket) %> |
+<%= link_to 'Back', tickets_path %>
