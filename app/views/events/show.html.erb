@@ -27,6 +27,7 @@ Preview Event
       <p><b>Category:</b><%= @event.category %></p>
       <p><b>Description:</b><%= @event.description %></p>
       <p><b>Organiser details:</b><%= @event.organiser_details %></p>
-      <%= link_to 'Edit', edit_event_path(@event) %> | <%= link_to 'Back', events_path %>              
+      <%= link_to 'Edit', edit_event_path(@event) %> | <%= link_to 'Back', events_path %>     
+      <%= render_shareable :buttons=> ['twitter', 'facebook'] %>
 </section>
 </div>
