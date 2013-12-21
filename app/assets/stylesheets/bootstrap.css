@@ -6009,7 +6009,7 @@ a.badge:focus {
 
 .carousel {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   line-height: 1;
 }
 
@@ -6108,10 +6108,13 @@ a.badge:focus {
 
 .carousel-indicators {
   position: absolute;
-  top: 15px;
-  right: 15px;
-  z-index: 5;
-  margin: 0;
+  bottom: 10px;
+  left: 50%;
+  z-index: 15;
+  width: 60%;
+  padding-left: 0;
+  margin-left: -30%;
+  text-align: center;
   list-style: none;
 }
 
