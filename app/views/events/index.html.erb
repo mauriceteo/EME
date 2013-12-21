@@ -2,40 +2,24 @@
 All Event
 <% end %>
 
-<table>
-  <tr>
-    <th>Event Poster</th>
-    <th>Title</th>
-    <th>Venue</th>
-    <th>Address</th>
-    <th>Date</th>
-    <th>Time</th>
-    <th>Category</th>
-    <th>Description</th>
-    <th>Organiser details</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @events.each do |event| %>
-  <tr>
-    <td><%= image_tag event.avatar, :size => "400x400" %></td>
-    <td><%= event.title %></td>
-    <td><%= event.venue %></td>
-    <td><%= event.address %></td>
-    <td><%= event.date %></td>
-    <td><%= event.time %></td>
-    <td><%= event.category %></td>
-    <td><%= event.description %></td>
-    <td><%= event.organiser_details %></td>
-    <td><%= link_to 'Show', event %></td>
-    <td><%= link_to 'Edit', edit_event_path(event) %></td>
-    <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
 <%= link_to 'New Event', new_event_path %>
+
+<div id="content" class="clrfix">
+    <section id="hero">
+        <% @events.each do |event| %>
+
+                        <div id="gallery" class="imageGallery" style="line-height: 10px;">
+                            <div id="Container0" style="display:block; float:right; width:20.95%; vertical-align: middle;">
+                                
+                                    <div class="galleryImageHolder">
+                                            
+                                            <%= image_tag event.avatar,:width=> "60%", :left=>"30.17"%>
+
+                                    </div>
+                            </div>
+
+
+                        </div>    
+        <% end %>
+    </section>
+</div>

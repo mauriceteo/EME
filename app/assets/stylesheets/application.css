@@ -20,6 +20,22 @@ color:white;
 font-weight:bold;
 }
 
+#content {
+width: 900px;
+margin: 13px auto;
+position: relative;
+}
+
+.clrfix {
+zoom: 1;
+}
+
+div .field{
+color:white;
+font-weight:bold;
+}
+
+
 .containerWrap {
   width: 100%;
   margin-top: 0px;
@@ -30,6 +46,38 @@ font-weight:bold;
   margin: auto;
   width: 960px;
 }
+
+#hero {
+  padding:30px;
+  position: relative;
+  width: 850px;
+  height: auto;
+  background-color: #333;
+  background-image: -webkit-gradient(radial,center top,0,center top,480,color-stop(0.3,#4c4c4c),color-stop(1,#333));
+  background-image: -webkit-radial-gradient(center top,ellipse farthest-side,#4c4c4c 30%,#333 100%);
+  background-image: -moz-radial-gradient(center top,ellipse farthest-side,#4c4c4c 30%,#333 100%);
+  background-image: -ms-radial-gradient(center top,ellipse farthest-side,#4c4c4c 30%,#333 100%);
+  background-image: -o-radial-gradient(center top,ellipse farthest-side,#4c4c4c 30%,#333 100%);
+  background-image: radial-gradient(center top,ellipse farthest-side,#4c4c4c 30%,#333 100%);
+  color: #fff;
+  font-weight: 400;
+}
+
+#hero2 {
+  position: relative;
+  width: 850px;
+  height: 700px;
+  background-color: #333;
+  background-image: -webkit-gradient(radial,center top,0,center top,480,color-stop(0.3,#4c4c4c),color-stop(1,#333));
+  background-image: -webkit-radial-gradient(center top,ellipse farthest-side,#4c4c4c 30%,#333 100%);
+  background-image: -moz-radial-gradient(center top,ellipse farthest-side,#4c4c4c 30%,#333 100%);
+  background-image: -ms-radial-gradient(center top,ellipse farthest-side,#4c4c4c 30%,#333 100%);
+  background-image: -o-radial-gradient(center top,ellipse farthest-side,#4c4c4c 30%,#333 100%);
+  background-image: radial-gradient(center top,ellipse farthest-side,#4c4c4c 30%,#333 100%);
+  color: #fff;
+  font-weight: 400;
+}
+
 
 .logo {
   width: 910px;
