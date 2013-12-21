@@ -1,9 +1,8 @@
 EME::Application.routes.draw do
-  resources :tickets
-
-
-  resources :events
-
+  
+  resources :events do
+     resources :tickets
+  end
 
   get "page/home"
 
