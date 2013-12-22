@@ -9,7 +9,7 @@ Log In
 		<legend style="font-size: 40px">Log In</legend>	  
 		<%= f.input :email %>
 		<%= f.input :password %>
- <div class="pull-right"><%= f.button :submit, "Sign in" %></div>
+ <div class="pull-right"><%= f.button :submit, "Sign In" %></div>
 
 	  <% if devise_mapping.rememberable? -%>
 	    <div><%= f.input :remember_me, as: :boolean %></div>

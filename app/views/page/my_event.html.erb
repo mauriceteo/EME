@@ -1,46 +1,27 @@
 <% content_for :title do %>
 My Event
 <% end %>
+<div id="content" class="clrfix">
+    <section id="hero" >
 <h1>My Event</h1>
-<p>Find me in app/views/page/my_event.html.erb</p>
-<% content_for :title do %>
-All Event
-<% end %>
 
 <table>
-  <tr>
-    <th>Event Poster</th>
-    <th>Title</th>
-    <th>Venue</th>
-    <th>Address</th>
-    <th>Date</th>
-    <th>Time</th>
-    <th>Category</th>
-    <th>Description</th>
-    <th>Organiser details</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
 <% @events.each do |event| %>
+
   <tr>
-    <td><%= image_tag event.avatar, :size => "400x400" %></td>
-    <td><%= event.title %></td>
-    <td><%= event.venue %></td>
-    <td><%= event.address %></td>
-    <td><%= event.date %></td>
-    <td><%= event.time %></td>
-    <td><%= event.category %></td>
-    <td><%= event.description %></td>
-    <td><%= event.organiser_details %></td>
+    <td><%= image_tag event.avatar, :width=> "229px",:height=>"350px" %>  </td>
+    <td><p>  </p> </td>
+    <td><%= event.title %></br>
+        <%= event.time %>, <%= event.date %></br>
+        <%= event.venue %></br>
+        <%= event.description %></br>
+    </td>
     <td><%= link_to 'Show', event %></td>
     <td><%= link_to 'Edit', edit_event_path(event) %></td>
     <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
-
 <br />
-
-<%= link_to 'New Event', new_event_path %>
+</section>
+</div>
