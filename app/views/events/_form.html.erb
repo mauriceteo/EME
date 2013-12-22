@@ -1,5 +1,6 @@
 <div id="content" class="clrfix">
   <section id="hero" >
+    <section id="hero2">
 <%= simple_form_for(@event, :html => {class: "form-horizontal well" , :multipart => true}) do |f| %>
 
   <%= f.error_notification %>
@@ -26,6 +27,7 @@
         <%= f.button :submit %>
     </div>
  <% end %>
+</section>
 </section>
 </div>
 
