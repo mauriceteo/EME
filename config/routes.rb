@@ -4,6 +4,9 @@ EME::Application.routes.draw do
      resources :tickets
   end
 
+  get "stores/index"
+  get "stores/:id(.:format)" => "stores#show" , :as => "store_id"
+
   get "page/home"
 
   get "page/about_us"
@@ -82,5 +85,5 @@ match 'contact' => 'contact#create', :as => 'contact', :via => :post
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id))(.:format)'
+   match ':controller(/:action(/:id))(.:format)'
 end

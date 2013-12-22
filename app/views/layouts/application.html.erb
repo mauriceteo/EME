@@ -5,7 +5,11 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-  
+  <script type="text/javascript" charset="utf-8">
+  $(function(){
+    $("#slides").electricSlide();
+  })
+</script>
 </head>
 <body>
   <!--Start wrapper -->
@@ -14,7 +18,7 @@
   <div class="header">
       <!--start logo -->
       <div class="logo">
-        <%=link_to(image_tag("Logo1.png",:size => "110x110"), page_home_path) %>
+        <%=link_to(image_tag("Logo1.png",:size => "110x110"), page_all_event_path) %>
     </div><!--end logo -->
     <!--start navigation -->
     <div id="nav">  <li class="current">

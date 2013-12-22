@@ -1,0 +1,36 @@
+<% content_for :title do %>
+Preview Event
+<% end %>
+
+<div id="content" class="clrfix">
+    <section id="hero2">
+      <table border="1">
+      <tr class="wsite-multicol-tr">
+        <td class="wsite-multicol-col" style="width:68.75%;padding:0 10px">
+            <div class="wsite-image wsite-image-border-thin " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+              <%= image_tag @event.avatar.url,:width=> "50%"%>
+            </div>
+        </td>
+        <td class="wsite-multicol-col" style="width:31.25%;padding:0 10px">
+            <h2 style="text-align:left;"><font size="3">Left ____ ticket!</font></h2>
+            <p></p>
+            <div class="paragraph" style="text-align:left;">
+              Due date for buying the ticket :<br>
+              Quantitiy of ticket bought: _____<br>
+              Total amount of price: RM ___</div></td>
+            </tr>
+            </table>
+      <p><b>Title:</b><%= @event.title %></p>
+      <p><b>Venue:</b><%= @event.venue %></p>
+      <p><b>Address:</b><%= @event.address %></p>
+      <p><b>Date:</b><%= @event.date %></p>
+      <p><b>Time:</b><%= @event.time %></p>
+      <p><b>Category:</b><%= @event.category %></p>
+      <p><b>Description:</b><%= @event.description %></p>
+      <p><b>Organiser details:</b><%= @event.organiser_details %></p>
+
+      <%= link_to 'Edit', edit_event_path(@event) %> | <%= link_to 'Back', events_path %>     
+      <%= render_shareable :buttons=> ['twitter', 'facebook'] %>
+
+</section>
+</div>

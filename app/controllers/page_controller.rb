@@ -1,11 +1,23 @@
 class PageController < ApplicationController
   def home
+    @events = Event.find(:all, :order => "RANDOM()", :limit => 10)
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @events }
+    end
   end
 
   def about_us
   end
 
   def all_event
+        @events = Event.find(:all, :order => "RANDOM()", :limit => 10)
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @events }
+    end
   end
 
   def event_details

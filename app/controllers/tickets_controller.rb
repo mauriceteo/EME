@@ -13,7 +13,8 @@ class TicketsController < ApplicationController
   # GET /tickets/1
   # GET /tickets/1.json
   def show
-    @ticket = Ticket.find(params[:id])
+    @event = Event.find(params[:event_id])
+    @ticket = @event.tickets(params[:ticket])
 
     respond_to do |format|
       format.html # show.html.erb

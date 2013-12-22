@@ -10,6 +10,7 @@ gem 'simple_form'
 gem 'linguistics'
 gem 'paperclip'
 gem 'shareable'
+gem 'will_paginate', '~> 3.0'
 
 group :development, :test do
 	gem 'sqlite3'
