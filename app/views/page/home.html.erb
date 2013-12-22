@@ -1,5 +1,5 @@
 <% content_for :title do %>
-Home
+All Event
 <% end %>
 
 <div id="banner-wrap" style="padding:30px 0;">
@@ -10,62 +10,36 @@ Home
           <div id="banner-inner">
             <div id="banner-left">
               <div class="wsite-header">
-                <div id="myCarousel" class="carousel slide">
-                  <div class="carousel-inner">
-                        <div class="item active">
-                          <a href="#">
-                            <img src="../assets/cheer.jpg"/>
-                          </a>
-                          <div class="figcaption">
+           <div id="myCarousel" class="carousel slide">
+
+                   <div class="carousel-inner">
+                     
+                     <div class="item active">
+
+                 </div>
+            <% @events.each do |event| %>
+                         <div class="item">
+                        
+                <%=link_to(image_tag(event.avatar), event) %>
+                 <div class="figcaption">
                             <strong>
-                              Lotus Concepts PASSPORT New Year's Eve 2014
+                             <%= event.title %>
                             </strong>
                             <p style="padding-right: 20px">
                               <span>
-                                Denver, CO | Dec 31 
+                               <%= event.venue %>| <%= event.date %>
                               </span>
-                              <a href="#"> View Event</a>
+                              <%=link_to "View Event", event %>
                             </p>
                           </div>
+                          
                         </div>
-
-                        <div class="item">
-                          <%=link_to(image_tag("../assets/js.jpg/"), page_home_path) %>
-                          <div class="figcaption">
-                            <strong>
-                              Lotus Concepts PASSPORT New Year's Eve 2014
-                            </strong>
-                            <p style="padding-right: 20px">
-                              <span>
-                                Denver, CO | Dec 31 
-                              </span>
-                              <a href="#"> View Event</a>
-                            </p>
-                          </div>
-                        </div>
-
-                        <div class="item">
-                          <a href="#">
-                            <img src="../assets/poster_stress.jpg"/>
-                          </a>
-                          <div class="figcaption">
-                            <strong>
-                              Lotus Concepts PASSPORT New Year's Eve 2014
-                            </strong>
-                            <p style="padding-right: 20px">
-                              <span>
-                                Denver, CO | Dec 31 
-                              </span>
-                              <a href="#"> View Event</a>
-                            </p>
-                          </div>
-                        </div>
-                  </div>
-
-                  <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+                          <% end %>
+                      </div>
+                       <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
                   <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
-                  
-                </div>     
+                </div>    
+               
               </div>
               <div id="inner-top"></div>
               <div id="inner-right"></div>
@@ -106,25 +80,3 @@ Home
     </div>
   </div>
 </div>
-
-<!--
- <div id="myCarousel" class="carousel slide">
-      <div class="carousel-inner">
-        <div class="item active">
-          <img src="../assets/images.png"/>
-        </div>
-
-        <div class="item">
-          <img src="/assets/js.jpg"/>
-        </div>
-
-        <div class="item">
-          <img src="../assets/poster_stress.jpg"/>
-        </div>
-
-      </div>
-
-      <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
-  /.carousel 
-</div>-->
