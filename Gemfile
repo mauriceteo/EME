@@ -9,6 +9,7 @@ gem 'devise'
 gem 'simple_form'
 gem 'linguistics'
 gem 'paperclip'
+gem 'shareable'
 
 group :development, :test do
 	gem 'sqlite3'
