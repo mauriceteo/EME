@@ -12,7 +12,7 @@ class PageController < ApplicationController
   end
 
   def all_event
-        @events = Event.find(:all, :order => "RANDOM()", :limit => 10)
+        @events = Event.find(:all, :order => "RANDOM()", :limit => 1)
 
     respond_to do |format|
       format.html # index.html.erb

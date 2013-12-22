@@ -11,13 +11,17 @@ All Event
             <div id="banner-left">
               <div class="wsite-header">
 			     <div id="myCarousel" class="carousel slide">
+
                    <div class="carousel-inner">
-                     <% @events.each do |event| %>
+                     
                      <div class="item active">
-		               
-                      <div class="item">
-					    <%=link_to(image_tag(event.avatar), event) %>
-					      <div class="figcaption">
+
+		             </div>
+						<% @events.each do |event| %>
+                         <div class="item">
+                      	
+					      <%=link_to(image_tag(event.avatar), event) %>
+					       <div class="figcaption">
                             <strong>
                              <%= event.title %>
                             </strong>
@@ -28,12 +32,10 @@ All Event
                               <%=link_to "View Event", event %>
                             </p>
                           </div>
-                        </div>
                           
+                        </div>
+                          <% end %>
                       </div>
-                      <% end %>
-                    </div>
-					
                        <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
                   <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
                 </div>    

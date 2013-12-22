@@ -27,28 +27,6 @@ Preview Event
       <p><b>Category:</b><%= @event.category %></p>
       <p><b>Description:</b><%= @event.description %></p>
       <p><b>Organiser details:</b><%= @event.organiser_details %></p>
- 
-
- <% @event.tickets.each do |ticket| %>
-
- <b><%= ticket.ticket_quantity %></b>
- <hr>
- <%end %>
- 
-<h1>Buy Ticket</h1>
-  <%= simple_form_for([@event, @event.tickets.create], :url => event_path(@event)) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :ticket_quantity %>
-
-
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit , "done" %>
-  </div>
-<% end %>
 
       <%= link_to 'Edit', edit_event_path(@event) %> | <%= link_to 'Back', events_path %>     
       <%= render_shareable :buttons=> ['twitter', 'facebook'] %>

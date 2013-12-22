@@ -2,26 +2,30 @@
 All Event
 <% end %>
 
-<%= link_to 'New Event', new_event_path %>
-
 <div id="content" class="clrfix">
     <section id="hero">
+        <section id ="hero2">
+        <h2>All Event</h2>
+        <table style="width:100%;">
+
         <% @events.each do |event| %>
-
-                        <div id="gallery" class="imageGallery" style="line-height: 10px;">
-                            <div id="Container0" style="display:block; float:right; width:20.95%; vertical-align: middle;">
-                                
-                                    <div class="galleryImageHolder">
-                                            <%=link_to(image_tag(event.avatar,:width=> "60%", :left=>"30.17"), event) %>
-                                            
-
-                                    </div>
-                            </div>
-
-
-                        </div>    
+            <tr>
+     <td style="padding:0px 0px 10px 0px;">
+        <%= image_tag event.avatar, :width=> "229px",:height=>"350px" %>  
+    </td>
+    <td><b><u><%= event.title %></u></b></br>
+        <%= event.time %>, <%= event.date %></br>
+        <%= event.venue %></br>
+        <%= event.description %></br>
+    </td>
+    <td><%= link_to '#', event %></td>
+  </tr>   
         <% end %>
         <%= will_paginate @events %>
         <br />
-    </section>
+
+</table>
+
+</section>
+</section>
 </div>
