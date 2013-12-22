@@ -1,9 +1,10 @@
 <div id="content" class="clrfix">
   <section id="hero" >
+    <section id="hero2">
 <%= simple_form_for(@event, :html => {class: "form-horizontal well" , :multipart => true}) do |f| %>
 
   <%= f.error_notification %>
-
+<h2 style="font-color: black">-----Step 1 Event Details-----</h2>
   <div class="form-inputs">
     <%= f.input :title, wrapper_html: { class: 'username' } %>
     <%= f.input :venue %>
@@ -13,31 +14,20 @@
     <%= f.input :category %>
     <%= f.input :description %>
     <%= f.input :organiser_details %>
- 
     <%= f.input :avatar, as: :file, label: "Event Poster" %>
+
+    <h2 style="font-color: black">-----Step 2 Ticket Information-----</h2>
+    <%= f.input :ticket_name %>
+    <%= f.input :ticket_price%>
+    <%= f.input :ticket_quantity %>
+    <%= f.input :due_date %>
 </div>
 
-
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
+    <div class="form-actions">
+        <%= f.button :submit %>
+    </div>
  <% end %>
- </div>
-<<<<<<< HEAD
-</div>
-
-=======
-
-</div>
-
-
-
->>>>>>> 175a5607b2e2bf317a87e57d38bc9433e688393f
-
-
+</section>
 </section>
 </div>
-<<<<<<< HEAD
-=======
 
->>>>>>> 175a5607b2e2bf317a87e57d38bc9433e688393f
