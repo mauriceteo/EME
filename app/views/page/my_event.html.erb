@@ -3,15 +3,17 @@ My Event
 <% end %>
 <div id="content" class="clrfix">
     <section id="hero" >
+        <section id="hero2" >
 <h1>My Event</h1>
 
-<table>
+<table style="width:100%;">
 <% @events.each do |event| %>
 
   <tr>
-    <td><%= image_tag event.avatar, :width=> "229px",:height=>"350px" %>  </td>
+    <td style="padding:0px 0px 10px 0px;">
+        <%= image_tag event.avatar, :width=> "229px",:height=>"350px" %>  </td>
     <td><p>  </p> </td>
-    <td><%= event.title %></br>
+    <td><b><u><%= event.title %></u></b></br>
         <%= event.time %>, <%= event.date %></br>
         <%= event.venue %></br>
         <%= event.description %></br>
@@ -23,5 +25,6 @@ My Event
 <% end %>
 </table>
 <br />
+</section>
 </section>
 </div>

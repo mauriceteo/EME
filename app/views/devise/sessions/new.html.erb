@@ -1,24 +1,28 @@
 <% content_for :title do %>
 Log In
 <% end %>
+
+<div id="content" class="clrfix">
+  <section id="hero3">
 <div class="row">
-	<div class="span8">
+	<div class="span1"></div>
+	<div class ="span8">
 
-<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name) , html: {class: "form-horizontal well"}) do |f| %>
- <fieldset>
-		<legend style="font-size: 40px">Log In</legend>	  
-		<%= f.input :email %>
-		<%= f.input :password %>
- <div class="pull-right"><%= f.button :submit, "Sign In" %></div>
+		<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name) , html: {class: "form-horizontal well"}) do |f| %>
+			<fieldset>
+				<legend style="font-size: 40px">Log In</legend>	  
+				<%= f.input :email %>
+				<%= f.input :password %>
+		 		<div class="pull-right"><%= f.button :submit, "Sign In" %></div>
 
-	  <% if devise_mapping.rememberable? -%>
-	    <div><%= f.input :remember_me, as: :boolean %></div>
-	  <% end %>
-
-	 
-	</fieldset>
-	<% end %>
-
-<%= render "devise/shared/links" %>
+			  		<% if devise_mapping.rememberable? -%>
+			    		<div><%= f.input :remember_me, as: :boolean %></div>
+					<% end %>
+					<legend></legend>
+            		<%= render "devise/shared/links" %>
+			</fieldset>
+		<% end %>
+	</div>
 </div>
+</section>
 </div>
