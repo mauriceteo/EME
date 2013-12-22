@@ -34,33 +34,27 @@ class EventsController < ApplicationController
   # POST /events
   # POST /events.json
  
-def new
-  session[:event_params] ||= {}
-  @event = Event.new(session[:event_params])
-  @event.current_step = session[:event_step]
-end
+  def new
+    @event = Event.new
 
-def create
-  session[:event_params].deep_merge!(params[:event]) if params[:event]
-  @event = Event.new(session[:event_params])
-  @event.current_step = session[:event_step]
-  if @event.valid?
-    if params[:back_button]
-      @event.previous_step
-    elsif @event.last_step?
-      @event.save if @event.all_valid?
-    else
-      @event.next_step
+    respond_to do |format|
+      format.html # new.html.erb
+      format.json { render json: @event }
     end
-    session[:event_step] = @event.current_step
-  end
-  if @event.new_record?
-    render "new"
-  else
-    session[:event_step] = session[:event_params] = nil
-    flash[:notice] = "Event saved!"
-    redirect_to @event
-  end
+ end
+
+
+  def create
+    @event = Event.new(params[:event])
+   respond_to do |format|
+     if @event.save
+        format.html { redirect_to @event, notice: 'Event was successfully created.' }
+        format.json { render json: @event, status: :created, location: @event }
+      else
+        format.html { render action: "new" }
+        format.json { render json: @event.errors, status: :unprocessable_entity }
+      end
+    end
 end
 
   # PUT /events/1
@@ -91,3 +85,4 @@ end
     end
   end
 end
+

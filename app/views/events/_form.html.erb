@@ -5,15 +5,23 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
+    <%= f.input :title, wrapper_html: { class: 'username' } %>
+    <%= f.input :venue %>
+    <%= f.input :address %>
+    <%= f.input :date, as: :date, start_year: Date.today.year + 0, end_year: Date.today.year + 5, order: [:day, :month, :year]%>
+    <%= f.input :time %>
+    <%= f.input :category %>
+    <%= f.input :description %>
+    <%= f.input :organiser_details %>
+ 
+    <%= f.input :avatar, as: :file, label: "Event Poster" %>
+</div>
 
-  <%= render "#{@event.current_step}", :f => f %>
-    
-<p><%= f.submit "Continue" %></p>
-    <p><%= f.submit "Back", :name => "back_button" unless @event.first_step? %></p>
 
-<% end %>
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+ <% end %>
  </div>
-
-
 </div>
-</div>
+

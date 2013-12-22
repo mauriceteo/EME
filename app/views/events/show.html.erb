@@ -28,8 +28,16 @@ Preview Event
       <p><b>Description:</b><%= @event.description %></p>
       <p><b>Organiser details:</b><%= @event.organiser_details %></p>
  
-<h1>Step 2</h1>
-  <%= simple_form_for([@event, @event.tickets]) do |f| %>
+
+
+ <% @event.tickets.each do |ticket| %>
+
+ <b><%= ticket.ticket_quantity %></b>
+ <hr>
+ <%end %>
+ 
+<h1>Buy Ticket</h1>
+  <%= simple_form_for([@event, @event.tickets.create], :url => event_path(@event)) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
