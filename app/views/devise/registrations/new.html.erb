@@ -1,9 +1,11 @@
 <% content_for :title do %>
 Register
 <% end %>
-
+<div id="content" class="clrfix">
+  <section id="hero3">
 <div class="row">
-  <div class="span8" style="padding:19px 0px 19px 19px">
+  <div class="span1"></div>
+  <div class="span8">
 
     <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: {class: "form-horizontal well"}) do |f| %>
       <%= devise_error_messages! %>
@@ -28,4 +30,6 @@ Register
         </fieldset>
     <% end %>
   </div>
+</div>
+</section>
 </div>

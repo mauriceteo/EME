@@ -57,6 +57,17 @@ font-weight:bold;
   font-weight: 400;
 }
 
+#hero3 {
+  padding:30px;
+  position: relative;
+  width: 660px;
+  height: auto;
+  background-color: #333;
+  color: #000000;
+  font-weight: 400;
+}
+
+
 #hero2 {
   padding:30px;
   position: relative;
