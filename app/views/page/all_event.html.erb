@@ -1,4 +1,82 @@
 <% content_for :title do %>
 All Event
 <% end %>
-inside index
+
+<div id="banner-wrap" style="padding:30px 0;">
+  <div class="container">
+    <div id="banner">
+      <div id="banner-top">
+        <div id="banner-mid">
+          <div id="banner-inner">
+            <div id="banner-left">
+              <div class="wsite-header">
+			     <div id="myCarousel" class="carousel slide">
+
+                   <div class="carousel-inner">
+                     
+                     <div class="item active">
+
+		             </div>
+						<% @events.each do |event| %>
+                         <div class="item">
+                      	
+					      <%=link_to(image_tag(event.avatar), event) %>
+					       <div class="figcaption">
+                            <strong>
+                             <%= event.title %>
+                            </strong>
+                            <p style="padding-right: 20px">
+                              <span>
+                               <%= event.venue %>| <%= event.date %>
+                              </span>
+                              <%=link_to "View Event", event %>
+                            </p>
+                          </div>
+                          
+                        </div>
+                          <% end %>
+                      </div>
+                       <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+                  <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+                </div>    
+               
+              </div>
+              <div id="inner-top"></div>
+              <div id="inner-right"></div>
+              <div id="inner-bottom"></div>
+              <div id="inner-left"></div>
+              <em id="tl"></em>
+              <em id="br"></em>
+            </div>
+
+            <div id="banner-right" class="landing-banner-outer">
+              <div class="landing-banner-mid">
+                <div class="landing-banner-inner">
+                  <h2>
+                    <span class="wsite-test wsite-headline">IF IT'S HAPPENING OUT THERE, YOU'LL FIND IT HERE!</span>
+                  </h2>
+                  <p>
+                    <span class="wsite-text wsite-headline-paragraph">
+                      <strong style>
+                        BROWSE 1000s OF EVENTS OR CREATE YOUR OWN EVENTS AND SELL TICKETS RIGHT HERE RIGHT NOW
+                      </strong>
+                    </span>
+                  </p>
+                  <div style ="text-align:center">
+                    <div style="height:0px; overflow:hidden"></div>
+                    <a href="#" style=""class="btn btn-info"> 
+                     Create an Event
+                    </a>
+                    <span>(It's free!)</span>
+                    <div style=="height:0px; overflow:hidden;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div style="clear:both"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

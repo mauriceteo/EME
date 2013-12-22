@@ -1,8 +1,12 @@
 <% content_for :title do %>
 Log In
 <% end %>
+
+<div id="content" class="clrfix">
+  <section id="hero3">
 <div class="row">
-	<div class="span8">
+	<div class="span1"></div>
+	<div class ="span8">
 
 		<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name) , html: {class: "form-horizontal well"}) do |f| %>
 			<fieldset>
@@ -19,4 +23,6 @@ Log In
 			</fieldset>
 		<% end %>
 	</div>
+</div>
+</section>
 </div>

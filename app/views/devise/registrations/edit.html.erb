@@ -1,8 +1,12 @@
 <% content_for :title do %>
 Edit User
 <% end %>
+
+<div id="content" class="clrfix">
+  <section id="hero3">
 <div class="row">
-  <div class="span8">
+  <div class="span1"></div>
+  <div class ="span8">
 
 <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { class: "form-horizontal well", :method => :put }) do |f| %>
   <%= devise_error_messages! %>
@@ -36,4 +40,6 @@ Edit User
 
 <%= link_to "Back", :back %>
 </div>
+</div>
+</section>
 </div>

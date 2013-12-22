@@ -20,6 +20,7 @@ Preview Event
               Total amount of price: RM ___</div></td>
             </tr>
             </table>
+<<<<<<< HEAD
           </br>
       <p><b>Title : </b><%= @event.title %></p>
       <p><b>Venue : </b><%= @event.venue %></p>
@@ -50,6 +51,16 @@ Preview Event
     <%= f.button :submit , "done" %>
   </div>
 <% end %>
+=======
+      <p><b>Title:</b><%= @event.title %></p>
+      <p><b>Venue:</b><%= @event.venue %></p>
+      <p><b>Address:</b><%= @event.address %></p>
+      <p><b>Date:</b><%= @event.date %></p>
+      <p><b>Time:</b><%= @event.time %></p>
+      <p><b>Category:</b><%= @event.category %></p>
+      <p><b>Description:</b><%= @event.description %></p>
+      <p><b>Organiser details:</b><%= @event.organiser_details %></p>
+>>>>>>> 702a3547125d2e86e437fd01d09f46163260bc40
 
       <%= link_to 'Edit', edit_event_path(@event) %> | <%= link_to 'Back', events_path %>     
       <%= render_shareable :buttons=> ['twitter', 'facebook'] %>

@@ -1,4 +1,4 @@
-/*
+ /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
@@ -53,16 +53,34 @@ font-weight:bold;
   width: 850px;
   height: auto;
   background-color: #333;
+  background-image: -webkit-gradient(radial,center top,0,center top,480,color-stop(0.3,#4c4c4c),color-stop(1,#333));
+  background-image: -webkit-radial-gradient(center top,ellipse farthest-side,#4c4c4c 30%,#333 100%);
+  background-image: -moz-radial-gradient(center top,ellipse farthest-side,#4c4c4c 30%,#333 100%);
+  background-image: -ms-radial-gradient(center top,ellipse farthest-side,#4c4c4c 30%,#333 100%);
+  background-image: -o-radial-gradient(center top,ellipse farthest-side,#4c4c4c 30%,#333 100%);
+  background-image: radial-gradient(center top,ellipse farthest-side,#4c4c4c 30%,#333 100%);
+  color: #fff;
+  font-weight: 400;
+}
+
+#hero3 {
+  padding:30px;
+  position: relative;
+  width: 660px;
+  height: auto;
+  background-color: #333;
   color: #000000;
   font-weight: 400;
 }
 
+
 #hero2 {
   padding:30px;
   position: relative;
-  width: 800px;
+  width: 795px;
   height: auto;
   background-color: #f5f5f5;
+  color: #000000;
   font-weight: 400;
 }
 
@@ -455,9 +473,5 @@ list-style: none;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
      -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-}
-
-tr{
-padding:0px 0px 10px 0px;
 }
 
