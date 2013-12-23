@@ -64,10 +64,16 @@ Home
                   </p>
                   <div style ="text-align:center">
                     <div style="height:0px; overflow:hidden"></div>
-                    <a href="#" style=""class="btn btn-info"> 
-                     Create an Event
-                    </a>
-                    <span>(It's free!)</span>
+                    <% if user_signed_in? %>
+                      <div style=""class="btn btn-info"> 
+                        <%= link_to "Create Event", new_event_path %>
+                      </div>
+                      <span>(It's free!)</span>
+                    <% else %>
+                      <div style=""class="btn btn-info"> 
+                        <%= link_to "Create Event", user_session_path %>
+                      </div>
+                    <% end %>
                     <div style=="height:0px; overflow:hidden;"></div>
                   </div>
                 </div>

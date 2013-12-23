@@ -1,6 +1,6 @@
 class PageController < ApplicationController
   def home
-    @events = Event.find(:all, :order => "RANDOM()", :limit => 10)
+    @events = Event.find(:all, :order => "RANDOM()")
 
     respond_to do |format|
       format.html # index.html.erb
