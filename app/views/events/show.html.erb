@@ -35,9 +35,10 @@ Preview Event
       <p><b>Description : </b><%= @event.description %></p>
       <p><b>Organiser details : </b><%= @event.organiser_details %></p>
        
-       
-      <button><%= link_to 'Edit', edit_event_path(@event) %></button>  
-      <button><%= link_to 'Destroy', @event, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+      <% if user_signed_in? %>
+        <button><%= link_to 'Edit', edit_event_path(@event) %></button>  
+        <button><%= link_to 'Destroy', @event, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+      <% end %>
       
 
       <hr><hr>
