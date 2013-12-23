@@ -4,7 +4,7 @@ class EventsController < ApplicationController
    rescue_from ActiveRecord::RecordNotFound, with: :dude_wheres_my_record
    
   def index
-    @events = Event.paginate(:page => params[:page], :per_page => 12)
+    @events = Event.all
 
     @paginate = Event.order(:name).page params[:page]
     respond_to do |format|
