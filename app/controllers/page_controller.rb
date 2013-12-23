@@ -30,6 +30,12 @@ class PageController < ApplicationController
   end
 
   def my_ticket
+    @events = Event.all
+
+    respond_to do |format|
+      format.html # my_event.html.erb
+      format.json { render json: @events }
+    end
   end
 
   def my_event
