@@ -1,15 +1,27 @@
-<h1>Listing stores</h1>
-
-<table>
-  <tr>
-    <th>Index</th>
-    <th>Show</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-</table>
-
+<% content_for :title do %>
+All Event
+<% end %>
+<div id="content" class="clrfix">
+    <section id="hero">
+        <section id ="hero2">
+        <h2>All Event</h2>
+        <table style="width:100%;">
+            <% @events.in_groups_of(2) do |row_tasks| %>
+            <tr>
+                <% for event in row_tasks %>
+                <td style="padding:0px 0px 10px 0px;">
+                    <%= image_tag event.avatar, :size => "150x300" %> </br>
+                    <b><u><%= event.title %></u></b></br>
+                    <%= event.time %>, <%= event.date %></br>
+                    <%= event.venue %></br>
+                    <%= event.description %></br>
+                    <%= link_to '#', :params => {:controller => 'stores', :action => 'show'} %>
+                </td><% end %>
+            </tr><% end %>
+        </table>
 <br />
+      
+</section>
+</section>
+</div>
 

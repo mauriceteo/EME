@@ -6,6 +6,7 @@ class EventsController < ApplicationController
   def index
     @events = Event.paginate(:page => params[:page], :per_page => 12)
 
+    @paginate = Event.order(:name).page params[:page]
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @events }

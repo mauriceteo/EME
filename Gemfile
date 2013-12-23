@@ -11,6 +11,7 @@ gem 'linguistics'
 gem 'paperclip'
 gem 'shareable'
 gem 'will_paginate', '~> 3.0'
+gem 'kaminari'
 
 group :development, :test do
 	gem 'sqlite3'

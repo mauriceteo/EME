@@ -4,7 +4,8 @@ EME::Application.routes.draw do
      resources :tickets
   end
 
-  get "stores/index"
+  get "stores/index" => "stores#index", :as => "stores_index"
+
   get "stores/:id(.:format)" => "stores#show" , :as => "store_id"
 
   get "page/home"

@@ -10,7 +10,7 @@ All Event
             <tr>
                 <% for event in row_tasks %>
                 <td style="padding:0px 0px 10px 0px;">
-                    <%= image_tag event.avatar, :width=> "229px",:height=>"350px" %> </br>
+                    <%= image_tag event.avatar, :size => "150x300" %> </br>
                     <b><u><%= event.title %></u></b></br>
                     <%= event.time %>, <%= event.date %></br>
                     <%= event.venue %></br>
@@ -20,6 +20,7 @@ All Event
             </tr><% end %>
         </table>
 <br />
+<%= paginate @paginate %>
       
 </section>
 </section>
