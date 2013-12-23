@@ -12,12 +12,11 @@ All Event
                 <% for event in row_tasks %>
                 <td style="padding:0px 0px 10px 0px;">
 
-                    <%= image_tag event.avatar, :size => "150x300" %> </br>
-
                     <%= link_to(image_tag(event.avatar, :width=> "229px",:height=>"350px"),event) %></br>
                     <b><u><%= event.title %></u></b></br>
                     <%= event.date %></br>
-                    <p><%= event.venue %> >>>  <%= link_to 'View', event %></p>
+                    <p><%= event.venue %></p>
+                        <button style="pulled right"><%= link_to 'View', event %></button>
                 </td><% end %>
             </tr><% end %>
         </table>
