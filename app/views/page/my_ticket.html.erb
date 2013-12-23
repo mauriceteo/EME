@@ -1,19 +1,29 @@
+<% content_for :title do %>
+My Event
+<% end %>
 <div id="content" class="clrfix">
-    <section id="hero">
-<section id="hero2" >
-<p></p>	
+    <section id="hero" >
+        <section id="hero2" >
 <h1>My Ticket</h1>
-<p>Find me in app/views/page/my_ticket.html.erb</p>
-should not be show on menu when user havent log in
-<h3>Confirmed Ticket</h3>
-------------------------
-</br>
-</br>
-<h3>Reserved Ticket</h3>
-------------------------
-</br>
-</br>
-</br>
+
+<table style="width:100%;">
+<% @events.each do |event| %>
+
+  <tr>
+    <td style="padding:0px 0px 10px 0px;">
+        <%= image_tag event.avatar, :width=> "229px",:height=>"350px" %>  </td>
+    <td><p>  </p> </td>
+    <td><b><u><%= event.title %></u></b></br>
+        <%= event.time %>, <%= event.date %></br>
+        <%= event.venue %></br>
+        <%= event.description %></br>
+    </td>
+    <td><%= link_to 'Show', event %></td>
+    <td><%= link_to 'Cancel', event, method: :delete, data: { confirm: 'Are you sure to cancel the ticket?' } %></td>
+  </tr>
+<% end %>
+</table>
+<br />
 </section>
 </section>
 </div>
