@@ -11,12 +11,15 @@ Preview Event
               <%= image_tag @event.avatar.url, :size=> "290x400"%>
             </div>
         </td>
-        <td class="wsite-multicol-col" style="width:31.25%;padding:0 10px">
+        <td class="wsite-multicol-col" style="width:500px; padding:0 10px">
             <h2 style="text-align:left;"><font size="3">Left <%= @event.ticket_quantity %> ticket!</font></h2>
             <p></p>
             <div class="paragraph" style="text-align:left;">
-              Due date for buying the ticket : <%= @event.due_date %><br />
-              Total amount of price: RM  <%= @event.ticket_price %></div>
+              <b>Expired By :  </b>
+               <%= @event.due_date %><br />
+              <b>Ticket price :  </b>
+               RM  <%= @event.ticket_price %></div>
+               <hr><hr>
               <%= render_shareable :buttons=> ['twitter', 'facebook'] %>
               </td>
             </tr>
@@ -31,9 +34,25 @@ Preview Event
       <p><b>Category : </b><%= @event.category %></p>
       <p><b>Description : </b><%= @event.description %></p>
       <p><b>Organiser details : </b><%= @event.organiser_details %></p>
-
+       
+       <% if user_signed_in? %>
       <button><%= link_to 'Edit', edit_event_path(@event) %></button>  
-      <button><%= link_to 'Back', events_path %></button> 
+      <button><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+      <% end %>
+
+      <hr><hr>
+      <h2>Purchase Ticket</h2>
+  <%= simple_form_for([@event, @event.tickets.create], :url => event_path(@event),:html => {class: "form-horizontal well" , :multipart => true}) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :ticket_quantity, :label => "Ticket Quantity" %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit , "Buy" %>
+  </div>
+<% end %>
 </section>
 </section>
 </div>
